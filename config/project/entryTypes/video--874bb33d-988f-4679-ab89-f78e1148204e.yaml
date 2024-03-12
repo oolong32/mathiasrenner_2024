@@ -1,0 +1,59 @@
+fieldLayouts:
+  8cff6331-39e2-46d9-97af-952e257dcef2:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 43217cba-b547-4782-bb71-e48537cb3047
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 4a14617c-b748-4a81-8b5b-a543fddb3ef6 # Vimeo-ID
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0e19ad55-6711-4bd2-941a-88104549dd42
+            userCondition: null
+            warning: null
+            width: 100
+        name: Inhalt
+        uid: f2421340-e1ad-4a33-8e71-1ae6a1f4f2e0
+        userCondition: null
+handle: video
+hasTitleField: true
+name: Video
+section: 6a085986-e262-4a23-9922-0fb08df43973 # Projekte
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 4
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

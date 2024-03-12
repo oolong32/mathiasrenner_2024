@@ -1,0 +1,60 @@
+fieldLayouts:
+  2c9dc57c-f729-4906-8df0-88bbe7e19207:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: a39f90b6-b0cb-407d-8b0e-fb79c1a424cb # Claim
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3366c39c-b1ec-4176-82a8-162ad11293be
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 13ac69aa-39df-4228-8aef-e5caa3260544 # Telefon-Nummer
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7dc7ba19-1322-4520-9646-941977a7e554
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c11e23e8-0999-4fb9-b438-c22e6d382971 # Suchmaschinentext
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5de9b952-4b83-4f27-9ef0-394ae37f1da1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d1714288-e0a8-4bc2-8172-a30cced6943d # E-Mail Adresse
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 05b08c4a-ce93-448c-a125-575baee7d3a7
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Allgemeine Infos'
+        uid: ac6a0e4b-2b32-4528-ac78-15c8f7b4974d
+        userCondition: null
+handle: infos
+name: 'Allgemeine Infos'
+sortOrder: 1

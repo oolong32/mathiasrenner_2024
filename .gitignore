@@ -1,0 +1,8 @@
+/vendor
+.DS_Store
+.ddev/
+.env.example.dev
+.env.example.production
+.env.example.staging
+.env
+web/assets/uploads

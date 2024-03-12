@@ -1,0 +1,19 @@
+columnSuffix: tidfbjul
+contentColumnType: text
+fieldGroup: ffb26aef-ae68-4bbf-b19c-9e287242ed75 # Common
+handle: vimeoId
+instructions: 'Vimeo-Code (nicht die ganze URL)'
+name: Vimeo-ID
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

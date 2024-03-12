@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: portfolio
+name: Portfolio
+propagationMethod: all
+siteSettings:
+  b5eda66e-372b-4610-ad92-f263e3eb0dca: # Mathias Renner
+    enabledByDefault: true
+    hasUrls: true
+    template: portfolio
+    uriFormat: portfolio
+type: single

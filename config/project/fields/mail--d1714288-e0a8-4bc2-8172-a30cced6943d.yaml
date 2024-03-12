@@ -1,0 +1,12 @@
+columnSuffix: ewqnxify
+contentColumnType: string
+fieldGroup: 78f5a77c-acae-4325-bc7f-2eddc73994a8 # Allgemeine Infos
+handle: mail
+instructions: null
+name: 'E-Mail Adresse'
+searchable: false
+settings:
+  placeholder: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Email

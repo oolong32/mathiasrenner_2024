@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: true
+handle: projects
+name: Projekte
+propagationMethod: all
+siteSettings:
+  b5eda66e-372b-4610-ad92-f263e3eb0dca: # Mathias Renner
+    enabledByDefault: true
+    hasUrls: true
+    template: projekte/_entry
+    uriFormat: 'projekte/{slug}'
+structure:
+  maxLevels: null
+  uid: fd7f9f1f-cab0-40c7-9268-1709ac06dc28
+type: structure

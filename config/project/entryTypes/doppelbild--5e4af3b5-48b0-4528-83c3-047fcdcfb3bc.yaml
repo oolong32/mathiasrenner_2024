@@ -1,0 +1,59 @@
+fieldLayouts:
+  a83ad7bf-69f6-4990-b2ad-c12e51af1975:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 3d0ab068-1c01-47d3-8f0b-9c97f6de8198
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b25c5e7e-fa61-4d6f-99ea-519b93f058a5 # Bilder
+            instructions: 'Zwei Hochformat-Bilder gleicher Grösse.'
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f1c03a07-5340-40ef-88a2-44b4ba4e30f4
+            userCondition: null
+            warning: null
+            width: 100
+        name: Inhalt
+        uid: 0c6aa1da-d272-4b08-b7f6-6fb4ba3046bf
+        userCondition: null
+handle: doppelbild
+hasTitleField: true
+name: Doppelbild
+section: 6a085986-e262-4a23-9922-0fb08df43973 # Projekte
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 3
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

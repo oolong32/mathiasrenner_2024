@@ -1,0 +1,60 @@
+dateModified: 1710273733
+email:
+  fromEmail: mathias@mathiasrenner.ch
+  fromName: 'Mathias Renner'
+  replyToEmail: null
+  template: null
+  transportSettings:
+    command: '/usr/local/bin/mailpit sendmail -t --smtp-addr 127.0.0.1:1025'
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  uploads:
+    hasUrls: true
+    name: uploads
+    settings:
+      path: '@webroot/assets/uploads'
+    type: craft\fs\Local
+    url: /assets/uploads/
+meta:
+  __names__:
+    3b6a5e69-01db-4fc5-85ed-baaf83f76a38: Hochformat # Hochformat
+    4a14617c-b748-4a81-8b5b-a543fddb3ef6: Vimeo-ID # Vimeo-ID
+    5e4af3b5-48b0-4528-83c3-047fcdcfb3bc: Doppelbild # Doppelbild
+    6a085986-e262-4a23-9922-0fb08df43973: Projekte # Projekte
+    8fba76c3-b944-46a0-b2dd-e0079de0fbc9: 'Mathias Renner' # Mathias Renner
+    13ac69aa-39df-4228-8aef-e5caa3260544: Telefon-Nummer # Telefon-Nummer
+    78f5a77c-acae-4325-bc7f-2eddc73994a8: 'Allgemeine Infos' # Allgemeine Infos
+    874bb33d-988f-4679-ab89-f78e1148204e: Video # Video
+    47618434-268a-4dbf-8ee6-999cb00ff7e7: Einzelbild # Einzelbild
+    a39f90b6-b0cb-407d-8b0e-fb79c1a424cb: Claim # Claim
+    ac321463-db08-4877-ab61-6c8d6e0d0ad3: medium # medium
+    b5eda66e-372b-4610-ad92-f263e3eb0dca: 'Mathias Renner' # Mathias Renner
+    b25c5e7e-fa61-4d6f-99ea-519b93f058a5: Bilder # Bilder
+    b440a038-e5ff-4267-a76b-47649fea286d: small # small
+    c11e23e8-0999-4fb9-b438-c22e6d382971: Suchmaschinentext # Suchmaschinentext
+    cb4e5ddb-8993-45b2-8a15-6d8128a09de2: 'Allgemeine Infos' # Allgemeine Infos
+    d7b83b12-666b-47d1-9ef4-4573e7a292f8: Portfolio # Portfolio
+    d39955c5-e921-4ad5-8867-d5acbfe2e721: Portfolio # Portfolio
+    d1714288-e0a8-4bc2-8172-a30cced6943d: 'E-Mail Adresse' # E-Mail Adresse
+    f3834e46-7811-4e9f-b816-946ce1fd3658: 'Public Schema' # Public Schema
+    fc0b7718-6b35-4edb-a329-5607ff2cb072: Uploads # Uploads
+    fd31447b-a7d9-40c3-b218-b9f2c4d61a0f: 'Portfolio Upload' # Portfolio Upload
+    ffb26aef-ae68-4bbf-b19c-9e287242ed75: Common # Common
+plugins:
+  feed-me:
+    edition: standard
+    enabled: true
+    schemaVersion: 5.1.0.0
+system:
+  edition: solo
+  live: true
+  name: 'Mathias Renner'
+  retryDuration: null
+  schemaVersion: 4.5.3.0
+  timeZone: Europe/Zurich
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

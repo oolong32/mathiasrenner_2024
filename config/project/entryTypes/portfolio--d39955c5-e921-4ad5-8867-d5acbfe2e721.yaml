@@ -1,0 +1,47 @@
+fieldLayouts:
+  0466fd07-abfa-4b49-a5be-6412ebe649fc:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: cbbdffa6-7fb1-4f6d-a088-dae729012b4e
+            userCondition: null
+            warning: null
+            width: 100
+        name: Inhalt
+        uid: 734d756e-c09c-4cd5-a256-03f940c8b30e
+        userCondition: null
+handle: portfolio
+hasTitleField: false
+name: Portfolio
+section: d7b83b12-666b-47d1-9ef4-4573e7a292f8 # Portfolio
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -1,0 +1,14 @@
+columnSuffix: otbofmqe
+contentColumnType: boolean
+fieldGroup: ffb26aef-ae68-4bbf-b19c-9e287242ed75 # Common
+handle: singleHigh
+instructions: null
+name: Hochformat
+searchable: false
+settings:
+  default: false
+  offLabel: null
+  onLabel: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

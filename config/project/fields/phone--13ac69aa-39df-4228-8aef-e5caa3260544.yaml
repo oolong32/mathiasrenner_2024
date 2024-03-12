@@ -1,0 +1,19 @@
+columnSuffix: cwlnklse
+contentColumnType: text
+fieldGroup: 78f5a77c-acae-4325-bc7f-2eddc73994a8 # Allgemeine Infos
+handle: phone
+instructions: null
+name: Telefon-Nummer
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText
