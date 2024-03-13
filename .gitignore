@@ -5,4 +5,5 @@
 .env.example.production
 .env.example.staging
 .env
+*.swp
 web/assets/uploads
