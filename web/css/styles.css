@@ -40,12 +40,12 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  letter-spacing: 0.03125rem;
+  /* letter-spacing: 0.03125rem; */
 }
 
 header h1, header p { 
   display: inline-block;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   white-space: nowrap;
 }
 
