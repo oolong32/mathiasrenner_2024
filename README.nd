@@ -1,0 +1,9 @@
+# Mathias Renner 2024
+
+- Bisherige Website musste komplett erneuert und nachgebaut werden, weil craft-vue nicht mehr unterstützt wrid.
+- Grund: php hat von 7 auf 8 gewechselt, Craft von 3 auf 4.
+
+## Ärger beim Deploy
+
+- GitHub Auto-Pull/Webhook hat nicht geklappt. Lösung: `~/.ssh/git_known_hosts` löschen.
+- Bilder waren nicht sichtbar. Lösung: `uploads/_small` auf 777 setzen, Inhalte auf 644. `_small` ist einer der Ordner, in dem Verkleinerungen, durch Crarfts File-Transformation gespeichert werden.
