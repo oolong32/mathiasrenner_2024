@@ -59,6 +59,20 @@ body#portfolio main p { text-align: center;}
 
 main { width: 100%; }
 
+.sf-dump { /* craft dump debug function */
+  grid-column: 1/-1;
+  display: block;
+  background: lightyellow !important;
+  color: violet !important;
+  font-family: 'MD IO Variable' !important;
+  font-variation-settings: 'wght' 330 !important;
+}
+
+.sf-dump-str {
+  /* background: black; */
+  color: purple !important;
+}
+
 article.project {
   width: 100%;
   display: grid;
@@ -72,8 +86,47 @@ article.project .project-title {
   align-self: end;
 }
 
-article.project vimeo-player { width: 100%; }
-article.project vimeo-player iframe { width: 100%; }
+/*
+article.project.video {
+  grid-template-columns: 1fr;
+  position relative;
+}
+article.project iframe {
+  width: 100% !important;
+  background: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+*/
+
+/*css-tricks*/
+article.project iframe {
+  width: 100%;
+  margin-bottom: auto;
+}
+article.project img {
+  height: auto;
+}
+
+@supports (--custom:property) {
+  article.project.video {
+    position: relative;
+  }
+  article.project.video::before {
+    content: "";
+    display: block;
+    padding-bottom: calc(100% / (var(--aspect-ratio)));
+  }
+  article.project.video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+}
+/*css-tricks*/
 
 article.project img.project-image { 
   display: block;

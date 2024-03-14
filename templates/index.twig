@@ -28,21 +28,11 @@
     {% set type = project.type %}
     {% set slug = project.slug %}
     <article class="project {{ type }} {{ slug }}"> {# hier noch type und slug in die class #}
-<!-- Kommentar aus vue-Zeiten:
+  <!-- 
     Die Eintragstypen "einzel-" und "doppelbild" sind gleich strukturiert.
     D.h. im Backend können max. 2 Bilder eingesetzt werden. Im Frontend werden
     aber nur im zweiten Fall zwei Bilder gezeigt. Ein ev. vorhandenes 2. Bild
     im Eintragstyp "einzelbild" wird ignoriert.
-
-    Zur Anzeige eines Einzelbildes ist eine spezielle komponente nötig, die
-    in der Lage ist, den img-Tag durch ein Hintergrundbild zu ersetzen.
-    Sonst wären die Höhen von Einzel- und Doppelbildern meist uneinheitlich.
-
-    Anm. 12.3.2024: es gab die komponenten
-    - BackgroundImage
-    - ProjectImage
-    - ProjectVideo
-    siehe unten
   -->
     {% if type == "einzelbild" %}
       {% set image = project.images[0] %}
@@ -53,7 +43,20 @@
       <img class="double project-image" src="{{image.getUrl('small')}}" alt="Mathias Renner, {{image.title}}" draggable="false" ondragstart="return flase;" />
       {% endfor %}
     {% else %}
-    <p>video</p>
+      {# dump(project.vimeoId) #}
+      {{ project.vimeoId.render({
+        params: {
+            autoplay: 1,
+            rel: 0,
+            mute: 0,
+            loop: 1,
+            autopause: 1,
+        },
+        attributes: {
+            title: 0,
+            'data-title': 'Some other title',
+        }
+      }) }}
     {% endif %}
     <p class="project-title">{{ project.title}}</p>
     </article>
@@ -67,53 +70,16 @@
     <footer>
       <p><a href="#projects">back to top</a></p>
     </footer>
+
+  <script>
+  // remove width & height attribute from iframes
+  const videos = document.querySelectorAll('.video iframe')
+  const videoArr = [...videos]
+  videoArr.forEach(iframe => {
+    iframe.removeAttribute('width')
+    iframe.removeAttribute('height')
+    iframe.removeAttribute('data-cookieconsent')
+  })
+  </script>
 </body>
 </html>
-
-<!--
-   <BackgroundImage
-      v-if="type == 'einzelbild'"
-      class="single"
-      :img-url="images[0].url"
-      :alt-text="`Mathias Renner, ${title}`" />
-      Und das war die Komponente dazu:
-        <figure :style="`background-image: url(${imgUrl});`" >
-          <img
-            draggable="false"
-            ondragstart="return false;"
-            class="project-image"
-            :src="imgUrl"
-            :alt="altText">
-        </figure>
-
-    <ProjectImage
-      v-if="type == 'doppelbild'"
-      v-for="image in images"
-      :key="image.id"
-      class="double"
-      :img-url="image.url"
-      :alt-text="`Mathias Renner, ${title}`" />
-      Und das war die Komponente dazu:
-       <img
-        draggable="false"
-        ondragstart="return false;"
-        class="project-image"
-        :src="imgUrl"
-        :alt="altText">
-
-    <ProjectVideo
-      v-if="type == 'video'"
-      :vimeoId="vimeoId" />
-      \<\!-- vorderhand obsolet: :video-src="videos[0].url" \-\->
-      Und das war die Komponente dazu:
-       <img
-        draggable="false"
-        ondragstart="return false;"
-        class="project-image"
-        :src="imgUrl"
-        :alt="altText">
-          Und dies war auskommentiert:
-          <video autoplay playsinline muted loop :src="videoSrc">
-          </video>
-          Weil "vueVimeoPlayer" verwendet wurde, offenbar ein npm modul
-    -->

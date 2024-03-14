@@ -1,4 +1,4 @@
-dateModified: 1710273733
+dateModified: 1710406282
 email:
   fromEmail: mathias@mathiasrenner.ch
   fromName: 'Mathias Renner'
@@ -41,10 +41,18 @@ meta:
     fd31447b-a7d9-40c3-b218-b9f2c4d61a0f: 'Portfolio Upload' # Portfolio Upload
     ffb26aef-ae68-4bbf-b19c-9e287242ed75: Common # Common
 plugins:
-  feed-me:
+  oembed:
     edition: standard
     enabled: true
-    schemaVersion: 5.1.0.0
+    schemaVersion: 1.0.1
+    settings:
+      enableCache: '1'
+      enableGdpr: ''
+      enableGdprCookieBot: '1'
+      enableNotifications: ''
+      facebookKey: ''
+      notificationEmail: ''
+      previewHidden: '1'
 system:
   edition: solo
   live: true

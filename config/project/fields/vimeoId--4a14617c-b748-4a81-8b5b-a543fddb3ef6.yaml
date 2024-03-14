@@ -6,14 +6,7 @@ instructions: 'Vimeo-Code (nicht die ganze URL)'
 name: Vimeo-ID
 searchable: false
 settings:
-  byteLimit: null
-  charLimit: null
-  code: false
-  columnType: null
-  initialRows: 4
-  multiline: false
-  placeholder: null
-  uiMode: normal
+  url: ''
 translationKeyFormat: null
 translationMethod: none
-type: craft\fields\PlainText
+type: wrav\oembed\fields\OembedField
