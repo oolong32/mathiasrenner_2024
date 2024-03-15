@@ -14,72 +14,102 @@
 
 <body id="projects">
 
-    <header>
-      <h1>{{ currentSite.name }}
-      <br>{{ infos.claim }}</h1>
-      <p><a href="tel:{{ infos.phone|replace({' ': ''}) }}">{{ infos.phone }}</a></p>
-      <p><a href="mailto:{{ infos.mail }}">contact</a></p>
-    </header>
+  <header>
+    <h1>{{ currentSite.name }}
+    <br>{{ infos.claim }}</h1>
+    <p><a href="tel:{{ infos.phone|replace({' ': ''}) }}">{{ infos.phone }}</a></p>
+    <p><a href="mailto:{{ infos.mail }}">contact</a></p>
+  </header>
 
-    {% set projects = craft.entries.section('projects') %}
-    {% if projects %}
-    <main class="project-list">
-    {% for project in projects %}
-    {% set type = project.type %}
-    {% set slug = project.slug %}
-    <article class="project {{ type }} {{ slug }}"> {# hier noch type und slug in die class #}
+  {% set projects = craft.entries.section('projects') %}
+  {% if projects %}
+  <main class="project-list">
+  {% for project in projects %}
+  {% set type = project.type %}
+  {% set slug = project.slug %}
+  <article class="project {{ type }} {{ slug }}" data-order="{{ loop.index }}"> {# hier noch type und slug in die class #}
   <!-- 
     Die Eintragstypen "einzel-" und "doppelbild" sind gleich strukturiert.
     D.h. im Backend können max. 2 Bilder eingesetzt werden. Im Frontend werden
     aber nur im zweiten Fall zwei Bilder gezeigt. Ein ev. vorhandenes 2. Bild
     im Eintragstyp "einzelbild" wird ignoriert.
   -->
-    {% if type == "einzelbild" %}
-      {% set image = project.images[0] %}
-      <img class="project-image" src="{{ image.getUrl('small') }}" alt="Mathias Renner, {{ image.title }}" draggable="false" ondragstart="return flase;" />
-    {% elseif type == "doppelbild" %}
+  {% if type == "einzelbild" %}
+    {% set image = project.images[0] %}
+    <img class="project-image" src="{{ image.getUrl('small') }}" alt="Mathias Renner, {{ image.title }}" draggable="false" ondragstart="return flase;" />
+  {% elseif type == "doppelbild" %}
 
-      {% for image in project.images %}
-      <img class="double project-image" src="{{image.getUrl('small')}}" alt="Mathias Renner, {{image.title}}" draggable="false" ondragstart="return flase;" />
-      {% endfor %}
-    {% else %}
-      {# dump(project.vimeoId) #}
-      {{ project.vimeoId.render({
-        params: {
-            autoplay: 1,
-            rel: 0,
-            mute: 0,
-            loop: 1,
-            autopause: 1,
-        },
-        attributes: {
-            title: 0,
-            'data-title': 'Some other title',
-        }
-      }) }}
-    {% endif %}
-    <p class="project-title">{{ project.title}}</p>
-    </article>
-
+    {% for image in project.images %}
+    <img class="double project-image" src="{{image.getUrl('small')}}" alt="Mathias Renner, {{image.title}}" draggable="false" ondragstart="return flase;" />
     {% endfor %}
-    </main>
-    {% else %}
-    <p>There are no projects available at this moment.</p>
-    {% endif %}
+  {% else %}
+    {# dump(project.vimeoId) #}
+    {{ project.vimeoId.render({
+      params: {
+          autoplay: 1,
+          rel: 0,
+          mute: 0,
+          loop: 1,
+          autopause: 1,
+      },
+      attributes: {
+          title: 0,
+          'data-title': 'Some other title',
+      }
+    }) }}
+  {% endif %}
+  <p class="project-title">{{ project.title}}</p>
+  </article>
 
-    <footer>
-      <p><a href="#projects">back to top</a></p>
-    </footer>
+  {% endfor %}
+  </main>
+  {% else %}
+  <p>There are no projects available at this moment.</p>
+  {% endif %}
 
+  <footer>
+    <p><a href="#projects">back to top</a></p>
+  </footer>
+
+  <script src="{{ url('js/element-size.js') }}">
+  </script>
   <script>
-  // remove width & height attribute from iframes
-  const videos = document.querySelectorAll('.video iframe')
-  const videoArr = [...videos]
-  videoArr.forEach(iframe => {
-    iframe.removeAttribute('width')
-    iframe.removeAttribute('height')
-    iframe.removeAttribute('data-cookieconsent')
-  })
+    // set size of vimeo
+    // according to column
+
+    // get all articles containing a video
+    const video_iFrames = document.querySelectorAll('.video iframe')
+    const arr= [...video_iFrames]
+
+
+    arr.forEach(iframe => {
+      // Get width of parent.
+      // Redundant, bc. it's going to be the same for all; but question
+      // seems not enough important for longer consideration.
+      const w = iframe.parentElement.offsetWidth
+      // set dimensions to 9:16
+      const h = Math.min(w/16*9)
+      const d = { w, h }
+      console.log(d)
+      setSize(iframe, d)
+    })
+
+
+
+    // plan b
+    // 1. get all videos
+    // loop through videos
+    // are we below the breakpoint?
+    // yes:
+    //   width is column, set height accordingly
+    // no:
+    //   is the video to the left? (odd number of article.dataset.order)
+    //   yes:
+    //     is it the last article?
+            // yes
+            // etc. etc.
+    // 
+    // 
   </script>
 </body>
 </html>
