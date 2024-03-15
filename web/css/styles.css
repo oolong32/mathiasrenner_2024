@@ -29,6 +29,7 @@ body {
 }
 
 header {
+  font-size: 0.8rem;
   z-index: 100; /* above vimeo iframes */
   position: fixed;
   top: 0;
