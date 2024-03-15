@@ -42,7 +42,8 @@ header {
   /* letter-spacing: 0.03125rem; */
 }
 
-header * { 
+header *,
+header a { 
   font-size: 0.8rem;
   display: inline-block;
   /* text-transform: uppercase; */
