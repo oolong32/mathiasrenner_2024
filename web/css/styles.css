@@ -1,7 +1,8 @@
 :root {
   font-family: courier, 'courier new', monospace;
   font-size: 100%;
-  font-weight:normal;
+  font-weight: normal;
+  line-height: 1.5;
   color: #000;
 }
 
@@ -9,9 +10,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 0.6875rem;
-  font-weight: normal;
-  line-height: 1.5;
   scroll-behavior: smooth; /* smooth sailing to top of page */
 }
 
@@ -21,6 +19,7 @@ img {
 }
 
 body {
+  font-size: 0.6875rem;
   padding: 18vw 3vw 4rem;
   display: flex;
   flex-direction: column;
