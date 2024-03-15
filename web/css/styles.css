@@ -44,7 +44,7 @@ header {
 
 header *,
 header a { 
-  font-size: 0.8rem;
+  font-size: 0.8rem !important; /* wtf!? */
   display: inline-block;
   /* text-transform: uppercase; */
   white-space: nowrap;
