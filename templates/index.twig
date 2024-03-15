@@ -88,9 +88,8 @@
       // seems not enough important for longer consideration.
       const w = iframe.parentElement.offsetWidth
       // set dimensions to 9:16
-      const h = Math.min(w/16*9)
+      const h = Math.round(w/16*9)
       const d = { w, h }
-      console.log(d)
       setSize(iframe, d)
     })
 
