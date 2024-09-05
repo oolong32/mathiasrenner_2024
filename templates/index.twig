@@ -36,11 +36,11 @@
   -->
   {% if type == "einzelbild" %}
     {% set image = project.images[0] %}
-    <img class="project-image" src="{{ image.getUrl('small') }}" alt="Mathias Renner, {{ image.title }}" draggable="false" ondragstart="return flase;" />
+    <img class="project-image" src="{{ image.getUrl('medium') }}" alt="Mathias Renner, {{ image.title }}" draggable="false" ondragstart="return flase;" />
   {% elseif type == "doppelbild" %}
 
     {% for image in project.images %}
-    <img class="double project-image" src="{{image.getUrl('small')}}" alt="Mathias Renner, {{image.title}}" draggable="false" ondragstart="return flase;" />
+    <img class="double project-image" src="{{image.getUrl('medium')}}" alt="Mathias Renner, {{image.title}}" draggable="false" ondragstart="return flase;" />
     {% endfor %}
   {% else %}
     {# dump(project.vimeoId) #}
