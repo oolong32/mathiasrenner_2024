@@ -7,3 +7,8 @@
 
 - GitHub Auto-Pull/Webhook hat nicht geklappt. Lösung: `~/.ssh/git_known_hosts` löschen.
 - Bilder waren nicht sichtbar. Lösung: `uploads/_small` auf 777 setzen, Inhalte auf 644. `_small` ist einer der Ordner, in dem Verkleinerungen, durch Crarfts File-Transformation gespeichert werden.
+
+## Development
+
+- use ddev
+- no npm, no valet
