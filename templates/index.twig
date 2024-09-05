@@ -87,18 +87,24 @@
     const video_iFrames = document.querySelectorAll('.video iframe')
     const arr= [...video_iFrames]
 
+    resizeVideos() // do it after loading
+    
+    addEventListener("resize", (e) => {
+      resizeVideos() // on every resize
+    });
 
-    arr.forEach(iframe => {
-      // Get width of parent.
-      // Redundant, bc. it's going to be the same for all; but question
-      // seems not enough important for longer consideration.
-      const w = iframe.parentElement.offsetWidth
-      // set dimensions to 9:16
-      const h = Math.round(w/16*9)
-      const d = { w, h }
-      setSize(iframe, d)
-    })
-
+    function resizeVideos() {
+      arr.forEach(iframe => {
+        // Get width of parent.
+        // Redundant, bc. it's going to be the same for all; but question
+        // seems not enough important for longer consideration.
+        const w = iframe.parentElement.offsetWidth
+        // set dimensions to 9:16
+        const h = Math.round(w/16*9)
+        const d = { w, h }
+        setSize(iframe, d)
+      })
+    }
 
 
     // plan b

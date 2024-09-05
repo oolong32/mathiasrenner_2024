@@ -105,6 +105,7 @@ article.project .project-title {
 article.project.video {
   grid-template-columns: 1fr;
   position relative;
+  justify-content: start;
 }
 
 article.project img.project-image { 
@@ -121,6 +122,10 @@ article.project.einzelbild img { grid-column: 1/-1; }
 
 article.project img.project-image + img.project-image { 
   margin-bottom: 0;
+}
+
+article.project iframe {
+  width: 100%;
 }
 
 /*
