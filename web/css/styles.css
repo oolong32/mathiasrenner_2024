@@ -27,6 +27,19 @@ body {
   justify-content: flex-start;
 }
 
+aside#where-is-this {
+  position: absolute;
+  top: 1rem;
+  left: 0.5rem;
+  background: black;
+  color: yellow;
+  transform: rotate(-12deg);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  box-shadow: -0.25rem 0.25rem gray;
+  letter-spacing: 0.0625rem;
+}
+
 header {
   z-index: 100; /* above vimeo iframes */
   position: fixed;
