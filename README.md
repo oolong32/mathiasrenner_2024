@@ -11,4 +11,10 @@
 ## Development
 
 - use ddev
+- docker app: colima
 - no npm, no valet
+
+```
+$ ddev list
+$ ddev start mathiasrenner
+```
