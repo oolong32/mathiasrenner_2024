@@ -27,7 +27,9 @@ body {
   justify-content: flex-start;
 }
 
-aside#where-is-this {
+#where-is-this {
+  /* marker that identifies the environment */
+  /* because sometimes it get’s confusing. */
   position: absolute;
   top: 1rem;
   left: 0.5rem;
