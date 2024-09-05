@@ -16,7 +16,7 @@
 
   {# mark dev and staging pages #}
   {% set whereIsThis = getenv('WHERE_IS_THIS') %}
-  {% if whereIsThis == 'staging' or 'home' %}
+  {% if whereIsThis == 'staging' or whereIsThis == 'home' %}
     <aside id="where-is-this">{{ whereIsThis }}</aside>
   {% endif %}
 
