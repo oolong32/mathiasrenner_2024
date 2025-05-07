@@ -11,7 +11,7 @@
 ## Development
 
 - use ddev
-- docker app: colima
+- docker app: ~~colima~~, OrbStack
 - no npm, no valet
 
 ```
