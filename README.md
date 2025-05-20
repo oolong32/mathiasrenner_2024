@@ -14,7 +14,17 @@
 - docker app: ~~colima~~, OrbStack
 - no npm, no valet
 
-```
-$ ddev list
-$ ddev start mathiasrenner
-```
+    $ ddev list
+    $ ddev start mathiasrenner
+
+## Deployment
+
+See [Craft Docs](https://craftcms.com/knowledge-base/deployment-best-practices#codify-deployment-steps)
+
+
+1. Pull or clone updated files using git pull;
+2. Update PHP dependencies by running composer install --no-interaction;
+3. Run php craft up to apply pending Craft, plugin, and content migrations, as well as project config changes;
+4. Clear caches (this may include PHP’s opcache, static caches in a CDN, and/or Craft’s data and schema caches);
+5. Restart any daemonized queue workers;
+
