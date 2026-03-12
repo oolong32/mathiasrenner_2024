@@ -1,175 +1,133 @@
 :root {
   font-family: courier, 'courier new', monospace;
-  font-size: 100%;
-  color: #000;
+font-size: 100%;
+color: #000;
 }
-
 *, html {
-  font-weight: normal;
-  font-size: 0.6875rem;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth; /* smooth sailing to top of page */
+font-weight: normal;
+font-size: 0.75rem;
+line-height: 1.5;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+scroll-behavior: smooth;
 }
-
 img {
-  width: 100%;
-  margin: 0;
+width: 100%;
+margin: 0;
 }
-
 body {
-  padding: 18vw 3vw 4rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+padding: 18vw 3vw 4rem;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: flex-start;
 }
-
 #where-is-this {
-  /* marker that identifies the environment */
-  /* because sometimes it get’s confusing. */
-  position: absolute;
-  top: 1rem;
-  left: 0.5rem;
-  background: black;
-  color: yellow;
-  transform: rotate(-12deg);
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.25rem;
-  box-shadow: -0.25rem 0.25rem gray;
-  letter-spacing: 0.0625rem;
+position: absolute;
+top: 1rem;
+left: 0.5rem;
+background: black;
+color: yellow;
+transform: rotate(-12deg);
+padding: 0.25rem 0.5rem;
+border-radius: 0.25rem;
+box-shadow: -0.25rem 0.25rem gray;
+letter-spacing: 0.0625rem;
 }
-
 header {
-  z-index: 100; /* above vimeo iframes */
-  position: fixed;
-  top: 0;
-  /* left: 0; */
-  height: 9vw;
-  padding: 1.25rem 3vw 0;
-
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  /* letter-spacing: 0.03125rem; */
+z-index: 100;
+position: fixed;
+top: 0;
+height: 9vw;
+padding: 1.25rem 3vw 0;
+width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
 }
-
 header *,
 header a { 
-  font-size: 0.8rem !important; /* wtf!? */
-  display: inline-block;
-  /* text-transform: uppercase; */
-  white-space: nowrap;
+font-size: 0.85rem !important;
+display: inline-block;
+white-space: nowrap;
 }
-
-header  a {
-    color: black;
-    text-decoration: none;
+header a {
+color: black;
+text-decoration: none;
 }
 header a:hover { text-decoration: underline; }
-
 body#portfolio main p { text-align: center;}
-
 main { width: 100%; }
-
-.sf-dump { /* craft dump debug function */
-  grid-column: 1/-1;
-  display: block;
-  background: lightyellow !important;
-  color: violet !important;
-  font-family: 'MD IO Variable' !important;
-  font-variation-settings: 'wght' 330 !important;
+.sf-dump {
+grid-column: 1/-1;
+display: block;
+background: lightyellow !important;
+color: violet !important;
+font-family: 'MD IO Variable' !important;
+font-variation-settings: 'wght' 330 !important;
 }
-
 .sf-dump-str {
-  /* background: black; */
-  color: purple !important;
+color: purple !important;
 }
-
 article.project {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 0 1rem;
-  margin-bottom: 3rem;
+width: 100%;
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-gap: 0 1rem;
+margin-bottom: 3rem;
 }
 article.project .project-title {
-  grid-column: 1/-1;
-  margin-top: 0.5rem;
-  align-self: end;
+grid-column: 1/-1;
+margin-top: 0.5rem;
+align-self: end;
 }
-
 article.project.video {
-  grid-template-columns: 1fr;
-  position relative;
-  justify-content: start;
+grid-template-columns: 1fr;
+position: relative;
+justify-content: start;
 }
-
 article.project img.project-image { 
-  display: block;
-  max-width: 100%;
-  height: auto;
-  /* prevent theft */
-  user-select: none;
-  user-drag: none;
-  -webkit-touch-callout: none;
+display: block;
+max-width: 100%;
+height: auto;
+user-select: none;
+user-drag: none;
+-webkit-touch-callout: none;
 }
-
 article.project.einzelbild img { grid-column: 1/-1; }
-
 article.project img.project-image + img.project-image { 
-  margin-bottom: 0;
+margin-bottom: 0;
 }
-
 article.project iframe {
-  width: 100%;
+width: 100%;
 }
-
-/*
-Anm. 12.3.2024 – keine Ahnung ob es das immer noch braucht
-article.project .video { max-width: 100%; } */
-
 footer {
-  text-align: center;
+text-align: center;
 }
 footer a {
-  text-decoration: none;
-  color: black;
-  /* text-transform: none; */
+text-decoration: none;
+color: black;
 }
-
 @media (min-width: 600px) {
-  body { padding-top: 10vw; }
-
-  header {
-    padding-top: 2vw;
-    width: 50%;
-    justify-content: space-between;
+body { padding-top: 10vw; }
+header {
+padding-top: 2vw;
+width: 50%;
+justify-content: space-between;
   }
-  header * { margin-right: 2rem; }
-
-
-  footer { margin-top: 3rem; }
-
-  main.project-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 5vw 8vw;
+header * { margin-right: 2rem; }
+footer { margin-top: 3rem; }
+main.project-list {
+display: grid;
+grid-template-columns: 1fr;
+grid-gap: 5vw 8vw;
   }
-
-  article.project { margin: 0; }
-  article.project img.project-image.single,
-  article.project img.project-image.double { margin: 0; }
+article.project { margin: 0; }
+article.project img.project-image.single,
+article.project img.project-image.double { margin: 0; }
 }
-
-/* Auf Mobile braucht es in Einzelbildprojekten das Bild, sonst wird nichts angezeigt */
 @media (max-width: 600px) {
-  article.einzelbild img { display: block; }
-
-/* Archiv */
+article.einzelbild img { display: block; }
 body#archive article.project { display: block; }
-
-
+}
