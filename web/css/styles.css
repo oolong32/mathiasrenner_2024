@@ -140,5 +140,5 @@ body#archive article.project { display: block; }
 article.project {
 grid-gap: 0 0.6rem;
 }
-header .phone { display: none; }
+header p.phone { display: none !important; }
 }
