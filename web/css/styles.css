@@ -110,7 +110,7 @@ text-decoration: none;
 color: black;
 }
 @media (min-width: 600px) {
-body { padding-top: 24vw; }
+body { padding-top: 10vw; }
 header {
 padding-top: 2vw;
 width: 50%;
