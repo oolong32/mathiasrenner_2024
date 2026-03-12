@@ -6,27 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="shortcut icon" href="/assets/_pic/favicon.png">
   <link rel="stylesheet" href="{{ url('css/styles.css') }}">
-
   <title>{{ siteName }}</title>
-
   <meta name="description" content="{{ infos.SEO_snippet }}">
 </head>
-
 <body id="projects">
-
   {# mark dev and staging pages #}
   {% set whereIsThis = getenv('WHERE_IS_THIS') %}
   {% if whereIsThis == 'staging' or whereIsThis == 'home' %}
     <aside id="where-is-this">{{ whereIsThis }}</aside>
   {% endif %}
-
   <header>
     <h1>{{ currentSite.name }}
     <br>{{ infos.claim }}</h1>
-    <p><a href="tel:{{ infos.phone|replace({' ': ''}) }}">{{ infos.phone }}</a></p>
+    <p class="phone"><a href="tel:{{ infos.phone|replace({' ': ''}) }}">{{ infos.phone }}</a></p>
     <p><a href="mailto:{{ infos.mail }}">contact</a></p>
   </header>
-
   {% set projects = craft.entries.section('projects') %}
   {% if projects %}
   <main class="project-list">
@@ -42,11 +36,10 @@
   -->
   {% if type == "einzelbild" %}
     {% set image = project.images[0] %}
-    <img class="project-image" src="{{ image.getUrl('') }}" alt="Mathias Renner, {{ image.title }}" draggable="false" ondragstart="return flase;" />
+    <img class="project-image" src="{{ image.getUrl() }}" alt="Mathias Renner, {{ image.title }}" draggable="false" ondragstart="return false;" />
   {% elseif type == "doppelbild" %}
-
     {% for image in project.images %}
-    <img class="double project-image" src="{{image.getUrl('')}}" alt="Mathias Renner, {{image.title}}" draggable="false" ondragstart="return flase;" />
+    <img class="double project-image" src="{{ image.getUrl() }}" alt="Mathias Renner, {{ image.title }}" draggable="false" ondragstart="return false;" />
     {% endfor %}
   {% else %}
     {# dump(project.vimeoId) #}
@@ -66,33 +59,27 @@
   {% endif %}
   <p class="project-title">{{ project.title}}</p>
   </article>
-
   {% endfor %}
   </main>
   {% else %}
   <p>There are no projects available at this moment.</p>
   {% endif %}
-
   <footer>
     <p><a href="#projects">back to top</a></p>
   </footer>
-
   <script src="{{ url('js/element-size.js') }}">
   </script>
   <script>
     // set size of vimeo
     // according to column
-
     // get all articles containing a video
     const video_iFrames = document.querySelectorAll('.video iframe')
     const arr= [...video_iFrames]
-
     resizeVideos() // do it after loading
     
     addEventListener("resize", (e) => {
       resizeVideos() // on every resize
     });
-
     function resizeVideos() {
       arr.forEach(iframe => {
         // Get width of parent.
@@ -105,8 +92,6 @@
         setSize(iframe, d)
       })
     }
-
-
     // plan b
     // 1. get all videos
     // loop through videos

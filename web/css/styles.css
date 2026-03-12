@@ -137,4 +137,8 @@ article.project img.project-image.double { margin: 0; }
 @media (max-width: 600px) {
 article.einzelbild img { display: block; }
 body#archive article.project { display: block; }
+article.project {
+grid-gap: 0 0.6rem;
+}
+header .phone { display: none; }
 }
