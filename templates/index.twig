@@ -44,8 +44,12 @@
   {% else %}
     <iframe
       src="https://customer-3ashzqr290v5ktt8.cloudflarestream.com/{{ project.vimeoId }}/iframe?autoplay=true&muted=true&loop=true&controls=false&preload=true"
-      style="border:none;width:100%;aspect-ratio:16/9;"
-      allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+      style="border:none;width:100%;display:block;"
+      allow="autoplay; picture-in-picture"
+      disablepictureinpicture
+      muted
+      autoplay
+      loop
     ></iframe>
   {% endif %}
 <p class="project-title">{{ project.title}}</p>
