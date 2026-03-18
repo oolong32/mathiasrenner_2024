@@ -155,6 +155,9 @@ header h1 a {
 header h1 a:hover {
   text-decoration: underline;
 }
+header.no-pointer {
+  pointer-events: none;
+}
 #about-modal {
   display: none;
   position: fixed;

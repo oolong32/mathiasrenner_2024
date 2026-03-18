@@ -90,16 +90,21 @@ const trigger = document.getElementById('about-trigger')
 const modal = document.getElementById('about-modal')
 const close = document.getElementById('about-close')
 const content = document.getElementById('about-content')
+const header = document.querySelector('header')
+
 trigger.addEventListener('click', (e) => {
   e.preventDefault()
   modal.classList.add('open')
+  header.classList.add('no-pointer')
 })
 close.addEventListener('click', () => {
   modal.classList.remove('open')
+  header.classList.remove('no-pointer')
 })
 modal.addEventListener('click', (e) => {
   if (!content.contains(e.target)) {
     modal.classList.remove('open')
+    header.classList.remove('no-pointer')
   }
 })
 
