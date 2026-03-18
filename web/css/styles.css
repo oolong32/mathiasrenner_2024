@@ -5,7 +5,7 @@ color: #000;
 }
 *, html {
 font-weight: normal;
-font-size: 0.6875rem;
+font-size: 0.8rem;
 line-height: 1.5;
 margin: 0;
 padding: 0;
@@ -173,6 +173,7 @@ header h1 a:hover {
   top: 1.25rem;
   right: 3vw;
   cursor: pointer;
+  font-size: 0.8rem;
 }
 #about-close:hover {
   text-decoration: underline;
@@ -180,10 +181,15 @@ header h1 a:hover {
 #about-content {
   text-align: center;
   line-height: 2;
+  font-size: 0.8rem;
 }
 #about-content p {
   margin-bottom: 2rem;
 }
 #about-content a {
   color: black;
+  text-decoration: none;
+}
+#about-content a:hover {
+  text-decoration: underline;
 }
