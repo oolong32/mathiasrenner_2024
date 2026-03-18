@@ -142,6 +142,9 @@ grid-gap: 0 0.6rem;
 }
 header p.phone { display: none !important; }
 body { padding-top: 24vw; }
+#about-content {
+padding: 3rem 1.5rem;
+}
 }
 /* About Modal */
 header h1 a {
@@ -165,6 +168,8 @@ header h1 a:hover {
 }
 #about-modal.open {
   display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   align-items: center;
   justify-content: center;
 }
@@ -182,14 +187,20 @@ header h1 a:hover {
   text-align: center;
   line-height: 2;
   font-size: 0.8rem;
-  padding: 4rem 2rem;
-  max-width: 600px;
+  padding: 3rem 20vw;
   width: 100%;
-  margin: auto;
+  box-sizing: border-box;
 }
 #about-content p {
   margin-bottom: 2rem;
 }
 #about-content a {
   color: black;
-  text-decoration: none
+  text-decoration: none;
+}
+#about-content a:hover {
+  text-decoration: underline;
+}
+#about-content a.service-link {
+  text-decoration: underline;
+}
