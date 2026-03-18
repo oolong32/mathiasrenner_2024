@@ -106,11 +106,29 @@ article.project iframe {
 width: 100%;
 }
 footer {
-text-align: center;
+width: 100%;
+margin-top: 3rem;
 }
 footer a {
 text-decoration: none;
 color: black;
+}
+footer a:hover {
+text-decoration: underline;
+}
+footer > p {
+text-align: center;
+margin-bottom: 3rem;
+}
+.footer-links {
+text-align: left;
+line-height: 1.5;
+}
+.footer-links p {
+margin-bottom: 0;
+}
+.footer-copy {
+margin-top: 1.5rem !important;
 }
 @media (min-width: 600px) {
 body { padding-top: 10vw; }

@@ -26,7 +26,7 @@
 <div id="about-modal">
   <span id="about-close">X</span>
   <div id="about-content">
-    <p>Mathias Renner is the co-founder and editor of <a class="service-link" href="https://www.service-mag.com" target="_blank">SERVICE</a> magazine. He works across strategy, concept and execution.</p>
+    <p>Mathias Renner is a creative director and the co-founder and editor of <a class="service-link" href="https://www.service-mag.com" target="_blank">SERVICE</a> magazine. He works across strategy, concept and execution.</p>
 
     <p>Services:<br>
     Creative Direction<br>
@@ -80,7 +80,13 @@
 <p>There are no projects available at this moment.</p>
   {% endif %}
 <footer>
-<p><a href="#projects">back to top</a></p>
+  <p><a href="#projects">back to top</a></p>
+  <div class="footer-links">
+    <p><a href="#" class="footer-about-trigger">About</a></p>
+    <p><a href="mailto:{{ infos.mail }}">Contact</a></p>
+    <p><a href="https://www.service-mag.com" target="_blank">Service Magazine</a></p>
+    <p class="footer-copy">© 2026 Mathias Renner</p>
+  </div>
 </footer>
 <script src="{{ url('js/element-size.js') }}">
 </script>
@@ -91,23 +97,33 @@ const modal = document.getElementById('about-modal')
 const close = document.getElementById('about-close')
 const content = document.getElementById('about-content')
 const header = document.querySelector('header')
+const footerTrigger = document.querySelector('.footer-about-trigger')
 
-trigger.addEventListener('click', (e) => {
-  e.preventDefault()
+function openModal() {
   modal.classList.add('open')
   header.classList.add('no-pointer')
   document.body.classList.add('modal-open')
-})
-close.addEventListener('click', () => {
+}
+function closeModal() {
   modal.classList.remove('open')
   header.classList.remove('no-pointer')
   document.body.classList.remove('modal-open')
+}
+
+trigger.addEventListener('click', (e) => {
+  e.preventDefault()
+  openModal()
+})
+footerTrigger.addEventListener('click', (e) => {
+  e.preventDefault()
+  openModal()
+})
+close.addEventListener('click', () => {
+  closeModal()
 })
 modal.addEventListener('click', (e) => {
   if (!content.contains(e.target)) {
-    modal.classList.remove('open')
-    header.classList.remove('no-pointer')
-    document.body.classList.remove('modal-open')
+    closeModal()
   }
 })
 
