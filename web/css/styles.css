@@ -135,9 +135,6 @@ article.project img.project-image.single,
 article.project img.project-image.double { margin: 0; }
 }
 @media (max-width: 600px) {
-*, html { font-size: 0.9rem; }
-header *,
-header a { font-size: 0.9rem !important; }
 article.einzelbild img { display: block; }
 body#archive article.project { display: block; }
 article.project {
@@ -145,12 +142,6 @@ grid-gap: 0 0.6rem;
 }
 header p.phone { display: none !important; }
 body { padding-top: 24vw; }
-#about-modal.open {
-padding: 8vw;
-}
-#about-content {
-padding: 15vw 8vw;
-}
 }
 /* About Modal */
 header h1 a {
@@ -180,7 +171,7 @@ header h1 a:hover {
 #about-close {
   position: fixed;
   top: 1.25rem;
-  right: 3vw;
+  right: 1.25rem;
   cursor: pointer;
   font-size: 0.8rem;
 }
@@ -191,6 +182,8 @@ header h1 a:hover {
   text-align: center;
   line-height: 2;
   font-size: 0.8rem;
+  padding: 4rem 2rem;
+  margin: auto;
 }
 #about-content p {
   margin-bottom: 2rem;
