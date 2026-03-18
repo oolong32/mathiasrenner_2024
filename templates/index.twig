@@ -16,11 +16,34 @@
 <aside id="where-is-this">{{ whereIsThis }}</aside>
   {% endif %}
 <header>
-<h1>{{ currentSite.name }}
-<br>{{ infos.claim }}</h1>
+<h1><a href="#" id="about-trigger">{{ currentSite.name }}
+<br>{{ infos.claim }}</a></h1>
 <p class="phone"><a href="tel:{{ infos.phone|replace({' ': ''}) }}">{{ infos.phone }}</a></p>
 <p><a href="mailto:{{ infos.mail }}">contact</a></p>
 </header>
+
+{# About Modal #}
+<div id="about-modal">
+  <span id="about-close">X</span>
+  <div id="about-content">
+    <p>Mathias Renner is a creative director and the<br>
+    co-founder and editor of <a href="https://www.service-mag.com" target="_blank">SERVICE</a> magazine.<br>
+    He works across strategy, concept and execution.</p>
+
+    <p>Services:</p>
+
+    <p>Creative Direction<br>
+    Creative Strategy<br>
+    Brand & Visual Image<br>
+    Editorial Design<br>
+    Artist and Brand Partnerships<br>
+    Photo & Video Production</p>
+
+    <p><a href="mailto:info@mathiasrenner.ch">info@mathiasrenner.ch</a><br>
+    +41 77 443 83 91</p>
+  </div>
+</div>
+
   {% set projects = craft.entries.section('projects') %}
   {% if projects %}
 <main class="project-list">
@@ -65,6 +88,18 @@
 <script src="{{ url('js/element-size.js') }}">
 </script>
 <script>
+// about modal
+const trigger = document.getElementById('about-trigger')
+const modal = document.getElementById('about-modal')
+const close = document.getElementById('about-close')
+trigger.addEventListener('click', (e) => {
+  e.preventDefault()
+  modal.classList.add('open')
+})
+close.addEventListener('click', () => {
+  modal.classList.remove('open')
+})
+
 // set size of vimeo
 // according to column
 // get all articles containing a video
