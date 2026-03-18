@@ -96,15 +96,18 @@ trigger.addEventListener('click', (e) => {
   e.preventDefault()
   modal.classList.add('open')
   header.classList.add('no-pointer')
+  document.body.classList.add('modal-open')
 })
 close.addEventListener('click', () => {
   modal.classList.remove('open')
   header.classList.remove('no-pointer')
+  document.body.classList.remove('modal-open')
 })
 modal.addEventListener('click', (e) => {
   if (!content.contains(e.target)) {
     modal.classList.remove('open')
     header.classList.remove('no-pointer')
+    document.body.classList.remove('modal-open')
   }
 })
 
