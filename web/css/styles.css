@@ -137,8 +137,11 @@ padding-top: 2vw;
 width: 50%;
 justify-content: space-between;
   }
-header * { margin-right: 2rem; }
+header * { margin-right: 2rem; font-size: 0.85rem !important; }
 footer { margin-top: 3rem; }
+footer a { font-size: 0.85rem; }
+.footer-links { font-size: 0.85rem; }
+*, html { font-size: 0.85rem; }
 main.project-list {
 display: grid;
 grid-template-columns: 1fr;
@@ -164,7 +167,7 @@ grid-gap: 0 0.6rem;
 header p.phone { display: none !important; }
 body { padding-top: 24vw; }
 #about-content {
-padding: 2rem 1.5rem;
+padding: 1.5rem;
 }
 }
 /* About Modal */

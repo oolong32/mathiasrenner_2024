@@ -19,7 +19,7 @@
 <h1><a href="#" id="about-trigger">{{ currentSite.name }}
 <br>{{ infos.claim }}</a></h1>
 <p class="phone"><a href="tel:{{ infos.phone|replace({' ': ''}) }}">{{ infos.phone }}</a></p>
-<p><a href="mailto:{{ infos.mail }}">contact</a></p>
+<p><a href="#" class="header-about-trigger">About</a></p>
 </header>
 
 {# About Modal #}
@@ -37,6 +37,8 @@
 
     <p><a href="mailto:info@mathiasrenner.ch">info[at]mathiasrenner.ch</a><br>
     +41 77 443 83 91</p>
+
+    <p><a href="https://www.service-mag.com" target="_blank">www.service-mag.com</a></p>
   </div>
 </div>
 
@@ -97,6 +99,7 @@ const close = document.getElementById('about-close')
 const content = document.getElementById('about-content')
 const header = document.querySelector('header')
 const footerTrigger = document.querySelector('.footer-about-trigger')
+const headerAboutTrigger = document.querySelector('.header-about-trigger')
 
 function openModal() {
   modal.classList.add('open')
@@ -110,6 +113,10 @@ function closeModal() {
 }
 
 trigger.addEventListener('click', (e) => {
+  e.preventDefault()
+  openModal()
+})
+headerAboutTrigger.addEventListener('click', (e) => {
   e.preventDefault()
   openModal()
 })
