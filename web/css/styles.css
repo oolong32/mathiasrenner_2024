@@ -5,7 +5,7 @@ color: #000;
 }
 *, html {
 font-weight: normal;
-font-size: 0.8rem;
+font-size: 0.85rem;
 line-height: 1.5;
 margin: 0;
 padding: 0;
@@ -51,7 +51,7 @@ align-items: flex-start;
 }
 header *,
 header a { 
-font-size: 0.8rem !important;
+font-size: 0.85rem !important;
 display: inline-block;
 white-space: nowrap;
 }
@@ -131,17 +131,19 @@ margin-bottom: 0;
 margin-top: 1.5rem !important;
 }
 @media (min-width: 600px) {
+*, html { font-size: 0.85rem; }
 body { padding-top: 10vw; }
 header {
 padding-top: 2vw;
-width: 50%;
-justify-content: space-between;
-  }
-header * { margin-right: 2rem; font-size: 0.85rem !important; }
+width: 100%;
+justify-content: center;
+gap: 8vw;
+align-items: flex-start;
+}
+header *,
+header a { font-size: 0.85rem !important; }
 footer { margin-top: 3rem; }
 footer a { font-size: 0.85rem; }
-.footer-links { font-size: 0.85rem; }
-*, html { font-size: 0.85rem; }
 main.project-list {
 display: grid;
 grid-template-columns: 1fr;
@@ -205,7 +207,7 @@ header.no-pointer {
   top: 1.25rem;
   right: 1.25rem;
   cursor: pointer;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
 }
 #about-close:hover {
   text-decoration: underline;
@@ -213,7 +215,7 @@ header.no-pointer {
 #about-content {
   text-align: center;
   line-height: 2;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   padding: 3rem;
   max-width: 480px;
   width: 100%;
