@@ -42,7 +42,6 @@ header {
 z-index: 100;
 position: fixed;
 top: 0;
-height: 9vw;
 padding: 1.25rem 3vw 0;
 width: 100%;
 display: flex;
@@ -136,8 +135,7 @@ body { padding-top: 10vw; }
 header {
 padding-top: 2vw;
 width: 100%;
-justify-content: center;
-gap: 8vw;
+justify-content: space-between;
 align-items: flex-start;
 }
 header *,
