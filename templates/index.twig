@@ -137,30 +137,26 @@ modal.addEventListener('click', (e) => {
 // set body padding based on header height
 function setBodyPadding() {
   const headerHeight = header.offsetHeight
-  const headerTop = parseFloat(getComputedStyle(header).paddingTop)
-  document.body.style.paddingTop = (headerHeight + headerTop) + 'px'
+  document.body.style.paddingTop = (headerHeight + 16) + 'px'
 }
 setBodyPadding()
 addEventListener('resize', setBodyPadding)
 
-// set size of vimeo
-// according to column
-// get all articles containing a video
+// resize videos
 const video_iFrames = document.querySelectorAll('.video iframe')
 const arr= [...video_iFrames]
-resizeVideos() // do it after loading
+resizeVideos()
 addEventListener("resize", (e) => {
-resizeVideos() // on every resize
-    });
+  resizeVideos()
+});
 function resizeVideos() {
-arr.forEach(iframe => {
-const w = iframe.parentElement.offsetWidth
-// set dimensions to 16:9
-const h = Math.round(w/16*9)
-const d = { w, h }
-setSize(iframe, d)
-      })
-    }
+  arr.forEach(iframe => {
+    const w = iframe.parentElement.offsetWidth
+    const h = Math.round(w/16*9)
+    const d = { w, h }
+    setSize(iframe, d)
+  })
+}
 </script>
 </body>
 </html>

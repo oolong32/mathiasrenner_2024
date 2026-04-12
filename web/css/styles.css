@@ -17,7 +17,7 @@ img {
   margin: 0;
 }
 body {
-  padding: 0 3vw 2rem;
+  padding: 0 3vw 0.8rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -206,9 +206,13 @@ header.no-pointer {
   article.project {
     grid-gap: 0 0.6rem;
     margin-bottom: 0;
-    padding-bottom: 0.6rem;
-    margin-top: 1.5rem;
+    padding-bottom: 1rem;
+    margin-top: 1rem;
     border-bottom: 0.3px solid #000;
+    width: 100vw;
+    margin-left: -3vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
   }
   header {
     border-bottom: 0.3px solid #000;
