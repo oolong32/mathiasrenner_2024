@@ -134,6 +134,15 @@ modal.addEventListener('click', (e) => {
   }
 })
 
+// set body padding based on header height
+function setBodyPadding() {
+  const headerHeight = header.offsetHeight
+  const headerTop = parseFloat(getComputedStyle(header).paddingTop)
+  document.body.style.paddingTop = (headerHeight + headerTop) + 'px'
+}
+setBodyPadding()
+addEventListener('resize', setBodyPadding)
+
 // set size of vimeo
 // according to column
 // get all articles containing a video
