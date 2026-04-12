@@ -7,7 +7,7 @@
 <link rel="shortcut icon" href="/assets/_pic/favicon.png">
 <link rel="stylesheet" href="{{ url('css/styles.css') }}">
 <title>{{ siteName }}</title>
-<meta name="description" content="{{ infos.SEO_snippet }}">
+<meta name="description" content="Mathias Renner. Creative Direction. Production. SERVICE Magazine. Photo and Video Production Zurich.">
 </head>
 <body id="projects">
 {# mark dev and staging pages #}
@@ -107,8 +107,10 @@ function openModal() {
 }
 function closeModal() {
   modal.classList.remove('open')
-  header.classList.remove('no-pointer')
   document.body.classList.remove('modal-open')
+  setTimeout(() => {
+    header.classList.remove('no-pointer')
+  }, 300)
 }
 
 trigger.addEventListener('click', (e) => {

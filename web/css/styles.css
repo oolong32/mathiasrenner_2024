@@ -131,9 +131,9 @@ margin-top: 1.5rem !important;
 }
 @media (min-width: 600px) {
 *, html { font-size: 0.85rem; }
-body { padding-top: 10vw; }
+body { padding-top: 4.2vw; }
 header {
-padding-top: 2vw;
+padding-top: 1.25rem;
 width: 100%;
 justify-content: space-between;
 align-items: flex-start;
@@ -163,6 +163,14 @@ article.einzelbild img { display: block; }
 body#archive article.project { display: block; }
 article.project {
 grid-gap: 0 0.6rem;
+margin-bottom: 0;
+padding-bottom: 3rem;
+border-bottom: 0.3px solid #000000;
+}
+header {
+border-bottom: 0.3px solid #000000;
+padding-bottom: 1rem;
+background: white;
 }
 header p.phone { display: none !important; }
 body { padding-top: 24vw; }
