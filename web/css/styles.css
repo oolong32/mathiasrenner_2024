@@ -185,6 +185,9 @@ header.no-pointer {
   text-decoration: underline;
 }
 @media (min-width: 600px) {
+  header {
+    border-bottom: 0.3px solid #000;
+  }
   main.project-list {
     display: grid;
     grid-template-columns: 1fr;
@@ -194,6 +197,10 @@ header.no-pointer {
     margin: 0;
     margin-bottom: 3rem;
     grid-template-columns: 1fr 1fr;
+  }
+  article.project:last-child {
+    padding-bottom: 3rem;
+    border-bottom: 0.3px solid #000;
   }
   article.project.einzelbild,
   article.project.video {

@@ -137,7 +137,8 @@ modal.addEventListener('click', (e) => {
 // set body padding based on header height
 function setBodyPadding() {
   const headerHeight = header.offsetHeight
-  document.body.style.paddingTop = headerHeight + 'px'
+  const gap = window.innerWidth >= 600 ? 20 : 0
+  document.body.style.paddingTop = (headerHeight + gap) + 'px'
 }
 setBodyPadding()
 addEventListener('resize', setBodyPadding)
