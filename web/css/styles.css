@@ -5,7 +5,7 @@
 }
 *, html {
   font-weight: normal;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   line-height: 1.5;
   margin: 0;
   padding: 0;
@@ -51,7 +51,7 @@ header {
   background: white;
 }
 header a {
-  font-size: 0.85rem !important;
+  font-size: 0.95rem !important;
   display: inline-block;
   white-space: nowrap;
   color: black;
@@ -60,6 +60,7 @@ header a {
 header a:hover { text-decoration: underline; }
 header h1 a {
   cursor: pointer;
+  text-transform: uppercase;
 }
 main { width: 100%; }
 body#portfolio main p { text-align: center; }
